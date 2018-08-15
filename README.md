@@ -6,7 +6,9 @@ It was inspired on adding logic operators to be able to apply different conditio
 
 ## Installation
 
-TODO
+```bash
+$ npm i fuse-operators
+```
 
 ## How to use
 
