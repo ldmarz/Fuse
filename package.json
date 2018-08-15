@@ -15,7 +15,9 @@
     "fuse",
     "search",
     "fuzzy",
-    "operators"
+    "operators",
+    "javascript",
+    "json"
   ],
   "author": "ldmarz <https://ldmarssite.wordpress.com/>",
   "license": "MIT",
