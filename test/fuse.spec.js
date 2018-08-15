@@ -54,7 +54,6 @@ describe('Should find results using operators', function () {
 
   it('Should find using in a subset the data', () => {
     const result = fuseWithOperators('Old Man || The Lock Artist > John', mockData, options);
-
     assert(result.length === 1);
   });
 });

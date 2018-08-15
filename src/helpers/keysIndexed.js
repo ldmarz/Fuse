@@ -26,7 +26,6 @@ class KeysIndexed {
 
   getSearchableKeys(sourceData) {
     let keys = [];
-    console.log(this.isAllowedKey);
     each(sourceData, value => {
       keys = concat(keys, this.mapKeysRecursive(value));
     });

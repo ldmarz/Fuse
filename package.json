@@ -1,6 +1,6 @@
 {
   "name": "fuse-operators",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "operators for fuse search",
   "main": "index.js",
   "scripts": {

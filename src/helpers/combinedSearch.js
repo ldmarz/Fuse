@@ -9,7 +9,6 @@ class CombinedSearch {
   }
 
   applyCombinedSearch(searchedString, results) {
-    debugger;
     let arrayString = null;
 
     if (!searchedString.match(regexForSearch.regexValidOperators)) {
@@ -67,9 +66,7 @@ class CombinedSearch {
 
   updateIndex(sourceData) {
     // Posible improvement only index the keys one time 🤔
-    const options = this.getOptionsFuse();
-
-    options.keys = options.keys || keysHelper.getSearchableKeys(sourceData);
+    const options = this.getOptionsFuse(sourceData);
     return new Fuse(sourceData, options);
   }
 
@@ -77,8 +74,12 @@ class CombinedSearch {
     return this.options;
   }
 
-  setFuseOptions(options) {
+  setFuseOptions(options, sourceData) {
     this.options = options;
+
+    this.options.keys = this.options.keys || keysHelper.getSearchableKeys(sourceData);
+    this.options.threshold = this.options.threshold || 0.1;
+    this.options.findAllMatches = this.options.findAllMatches || true;
   }
 }
 
