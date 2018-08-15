@@ -1,0 +1,38 @@
+{
+  "name": "fuse-operators",
+  "version": "1.0.0",
+  "description": "operators for fuse search",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "test:watch": "mocha --watch --inspect=0.0.0.0 --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ldmarz/Fuse.git"
+  },
+  "keywords": [
+    "fuse",
+    "search",
+    "fuzzy",
+    "operators"
+  ],
+  "author": "ldmarz <https://ldmarssite.wordpress.com/>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ldmarz/Fuse/issues"
+  },
+  "homepage": "https://github.com/ldmarz/Fuse#readme",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "dependencies": {
+    "fuse.js": "^3.2.1",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.3.0",
+    "mocha": "^5.2.0"
+  }
+}
