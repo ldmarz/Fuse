@@ -32,8 +32,17 @@ const mockData = [
 ];
 ```
 
+### Available arguments
+```javascript
+import fuseWithOperators from 'fuse-operators';
+const options = {}; // Here you can add all options from http://fusejs.io/ package
+
+const result = fuseWithOperators(query, mockData, options);
+```
+
 #### AND Operator
 ```javascript
+import fuseWithOperators from 'fuse-operators';
 const query = 'old man && scalzi';
 const result = fuseWithOperators(query, mockData);
 // → [{"title": "Old Man's War", "author": {"firstName": "John", "lastName": "Scalzi"}}]
@@ -41,6 +50,7 @@ const result = fuseWithOperators(query, mockData);
 
 #### OR Operator
 ```javascript
+import fuseWithOperators from 'fuse-operators';
 const query = 'old man || artist';
 const result = fuseWithOperators(query, mockData);
 // → [{"title": "Old Man's War", "author": {"firstName": "John", "lastName": "Scalzi"}}, {"title": "The Lock Artist", "author": {"firstName": "John", "lastName": "Hamilton"}}]
@@ -48,6 +58,7 @@ const result = fuseWithOperators(query, mockData);
 
 #### SUBSET Operator
 ```javascript
+import fuseWithOperators from 'fuse-operators';
 const query = 'old man || the lock artist > scalzi';
 const result = fuseWithOperators(query, mockData);
 // → [{"title": "Old Man's War", "author": {"firstName": "John", "lastName": "Scalzi"}}]
